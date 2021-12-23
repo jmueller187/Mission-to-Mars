@@ -58,8 +58,10 @@ img_url
 
 # Scrape Mars Planet Profile table from galaxyfacts-mars.com into DataFrame
 mars_facts_df = pd.read_html('https://galaxyfacts-mars.com')[0]
-mars_facts_df.columns=['description', 'Mars', 'Earth']
-mars_facts_df.set_index('description', inplace=True)
+mars_facts_df.head()
+
+mars_facts_df.columns=['Description', 'Mars', 'Earth']
+mars_facts_df.set_index('Description', inplace=True)
 mars_facts_df
 
 mars_facts_df.to_html()
